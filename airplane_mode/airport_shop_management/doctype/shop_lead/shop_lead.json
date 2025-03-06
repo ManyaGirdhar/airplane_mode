@@ -1,0 +1,132 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{tenant_name}-{###}",
+ "creation": "2025-03-03 14:20:49.095475",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "personal_information_section",
+  "tenant_name",
+  "email",
+  "phone",
+  "address",
+  "column_break_etzm",
+  "aadhaar_card",
+  "passport_sized_photograph",
+  "business_information_section",
+  "business_type",
+  "business_name",
+  "gst_no",
+  "shop_information_section",
+  "shop"
+ ],
+ "fields": [
+  {
+   "fieldname": "personal_information_section",
+   "fieldtype": "Section Break",
+   "label": "Personal Information"
+  },
+  {
+   "fieldname": "tenant_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Lead Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Phone",
+   "label": "Phone",
+   "reqd": 1
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_etzm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "aadhaar_card",
+   "fieldtype": "Attach",
+   "label": "Aadhaar Card",
+   "reqd": 1
+  },
+  {
+   "fieldname": "passport_sized_photograph",
+   "fieldtype": "Attach Image",
+   "label": "Passport sized Photograph",
+   "reqd": 1
+  },
+  {
+   "fieldname": "business_information_section",
+   "fieldtype": "Section Break",
+   "label": "Business Information"
+  },
+  {
+   "fieldname": "business_type",
+   "fieldtype": "Data",
+   "label": "Category"
+  },
+  {
+   "fieldname": "business_name",
+   "fieldtype": "Data",
+   "label": "Business Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "gst_no",
+   "fieldtype": "Data",
+   "label": "GST No.",
+   "reqd": 1
+  },
+  {
+   "fieldname": "shop_information_section",
+   "fieldtype": "Section Break",
+   "label": "Shop Information"
+  },
+  {
+   "fieldname": "shop",
+   "fieldtype": "Data",
+   "label": "Shop",
+   "read_only": 1
+  }
+ ],
+ "image_field": "passport_sized_photograph",
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-03-03 14:23:54.173824",
+ "modified_by": "Administrator",
+ "module": "Airport Shop Management",
+ "name": "Shop Lead",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

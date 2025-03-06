@@ -5,6 +5,16 @@ app_description = "Airline Ticketing System"
 app_email = "manya@korecent.com"
 app_license = "mit"
 
+
+
+fixtures = [
+    {
+        "dt": "Shop Type",
+        "filters": [["name", "in", ["Stall", "Walk-through", "Normal"]]]
+    }
+]
+
+
 # Apps
 # ------------------
 
@@ -139,6 +149,7 @@ app_license = "mit"
 
 # doc_events = {
 # 	"*": {
+#         "before_save": "airplane_mode.airplane_mode.doctype.airplane_flight.airplane_flight.before_save"
 # 		"on_update": "method",
 # 		"on_cancel": "method",
 # 		"on_trash": "method"
@@ -148,23 +159,25 @@ app_license = "mit"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
+scheduler_events = {
 # 	"all": [
 # 		"airplane_mode.tasks.all"
 # 	],
-# 	"daily": [
-# 		"airplane_mode.tasks.daily"
-# 	],
+    "daily": [
+        "airplane_mode.airport_shop_management.doctype.lease_contract.lease_contract.update_expired_shops",
+        "airplane_mode.airport_shop_management.api.rent_reminder.send_rent_reminders"
+    ],
+
 # 	"hourly": [
 # 		"airplane_mode.tasks.hourly"
 # 	],
 # 	"weekly": [
 # 		"airplane_mode.tasks.weekly"
-# 	],
+# # 	],
 # 	"monthly": [
-# 		"airplane_mode.tasks.monthly"
+		 
 # 	],
-# }
+}
 
 # Testing
 # -------

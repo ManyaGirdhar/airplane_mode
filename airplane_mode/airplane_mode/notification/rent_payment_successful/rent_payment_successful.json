@@ -1,0 +1,31 @@
+{
+ "attach_print": 0,
+ "channel": "Email",
+ "creation": "2025-03-01 12:06:54.655416",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Rent Payment",
+ "enabled": 1,
+ "event": "Submit",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "<p>Dear {{doc.tenant}},</p>\n\n<p>We hope this email finds you well.</p>\n\n<p>This is to confirm that we have received your rent payment for the lease contract <strong>{{doc.lease_contract}}</strong>. Below are the payment details:</p>\n\n<p><strong>Contract Information:</strong></p>\n\n<ul>\n    <li><strong>Rent Amount:</strong> {{doc.rent_amount}}</li>\n    <li><strong>Lease Expiry Date:</strong> {{doc.expiry_date}}</li>\n</ul>\n\n<p><strong>Payment Information:</strong></p>\n\n<ul>\n    <li><strong>Payment Date:</strong> {{doc.payment_date}}</li>\n    <li><strong>Amount Paid:</strong> {{doc.amount_paid}}</li>\n    <li><strong>Payment Mode:</strong> {{doc.payment_mode}}</li>\n</ul>\n\n<p>If you have any questions or require further assistance, please feel free to contact us.</p>\n\n<p>Best regards,</p>\n\n<p><strong>SkyTrack Airport Management System</strong></p>\n\n<p>Email: <a href=\"mailto:skytrack.management.system@gmail.com\">skytrack.management.system@gmail.com</a></p>\n",
+ "message_type": "Markdown",
+ "modified": "2025-03-03 15:12:47.789982",
+ "modified_by": "Administrator",
+ "module": "Airplane Mode",
+ "name": "Rent payment Successful",
+ "owner": "Administrator",
+ "print_format": "Rent Receipt",
+ "recipients": [
+  {
+   "receiver_by_document_field": "tenant_email"
+  }
+ ],
+ "send_system_notification": 1,
+ "send_to_all_assignees": 0,
+ "sender": "SkyTrack",
+ "sender_email": "skytrack.management.system@gmail.com",
+ "subject": " Rent Payment Confirmation for Lease Contract [{{doc.lease_contract}}]"
+}

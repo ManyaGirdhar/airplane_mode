@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ doc.title or doc.name }}</title>
+    <link rel="stylesheet" type="text/css" href="/assets/airplane_mode/css/picnic.css">
+</head>
+<body>
+
+    <div class="shop-container">
+        <!-- Shop Image -->
+        {% if doc.image %}
+        <img src="{{ doc.image }}" alt="{{ doc.title or doc.name }}" class="shop-image">
+        {% endif %}
+
+        <!-- Shop Information -->
+        <div class="shop-details">
+            <h1>{{ doc.title or doc.name }}</h1>
+            <p><strong>Airport:</strong> {{ doc.airport }}</p>
+            <p><strong>Lease Status:</strong> 
+                <span class="label {{ 'success' if doc.lease_status == 'Available' else 'error' }}">
+                    {{ doc.lease_status }}
+                </span>
+            </p>
+            <p><strong>Shop Type:</strong> {{ doc.shop_type or "No description available." }}</p>
+            <p><strong>Area:</strong> {{ doc.area or "No description available." }}</p>
+
+
+            <!-- Link to Shop Leads Form -->
+            <a href="/shop-lead/new?shop={{ doc.name }}" class="button primary">Interested?</a>
+        </div>
+    </div>
+
+    <style>
+        .shop-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .shop-image {
+            width: 100%;
+            max-height: 350px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .shop-details h1 {
+            margin: 20px 0;
+            color: #333;
+        }
+
+        .shop-details p {
+            font-size: 16px;
+            color: #666;
+            margin: 10px 0;
+        }
+
+        .label {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .success {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .error {
+            background-color: #dc3545;
+            color: white;
+        }
+    </style>
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{shop}_{tenant}",
+ "creation": "2025-02-27 15:34:28.374005",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "shop_information_section",
+  "shop",
+  "column_break_tuvp",
+  "airport",
+  "section_break_kqht",
+  "tenant",
+  "column_break_evvj",
+  "tenant_email",
+  "contract_information_section",
+  "start_date",
+  "column_break_vlhg",
+  "expiry_date",
+  "rent_amount",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "shop",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Shop",
+   "options": "Shop",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tenant",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Tenant",
+   "options": "Tenant",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rent_amount",
+   "fieldtype": "Float",
+   "label": "Rent Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "label": "Expiry Date",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "tenant.email",
+   "fieldname": "tenant_email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Tenant Email",
+   "options": "Email",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "shop.airport",
+   "fieldname": "airport",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Airport",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "shop_information_section",
+   "fieldtype": "Section Break",
+   "label": "Shop Information"
+  },
+  {
+   "fieldname": "section_break_kqht",
+   "fieldtype": "Section Break",
+   "label": "Tenant Information"
+  },
+  {
+   "fieldname": "contract_information_section",
+   "fieldtype": "Section Break",
+   "label": "Contract Information"
+  },
+  {
+   "fieldname": "column_break_tuvp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_evvj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_vlhg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Lease Contract",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-02-28 14:44:57.002997",
+ "modified_by": "Administrator",
+ "module": "Airport Shop Management",
+ "name": "Lease Contract",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,94 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{designation}-{####}",
+ "creation": "2025-02-26 19:28:53.739744",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "employee_name",
+  "email",
+  "phone_no",
+  "designation",
+  "address",
+  "available",
+  "passport_sized_photograph"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Employee Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email",
+   "options": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "phone_no",
+   "fieldtype": "Phone",
+   "in_list_view": 1,
+   "label": "Phone No.",
+   "reqd": 1
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Designation",
+   "options": "Pilot\nCo-Pilot\nCabin Crew\nEngineer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "available",
+   "fieldtype": "Check",
+   "label": "Available"
+  },
+  {
+   "fieldname": "passport_sized_photograph",
+   "fieldtype": "Attach Image",
+   "label": "Passport sized Photograph",
+   "reqd": 1
+  }
+ ],
+ "image_field": "passport_sized_photograph",
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-28 15:19:32.792669",
+ "modified_by": "Administrator",
+ "module": "Airplane Mode",
+ "name": "Employee",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "employee_name"
+}

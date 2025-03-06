@@ -1,0 +1,140 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{lease_contract}_{payment_date}",
+ "creation": "2025-02-27 15:52:08.965651",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "contract_information_section",
+  "lease_contract",
+  "tenant",
+  "tenant_email",
+  "column_break_ncva",
+  "rent_amount",
+  "expiry_date",
+  "section_break_fqzo",
+  "payment_date",
+  "amount_paid",
+  "column_break_yltl",
+  "payment_mode",
+  "payment_proof",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "lease_contract",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Lease Contract",
+   "options": "Lease Contract",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment_date",
+   "fieldtype": "Date",
+   "label": "Payment Date",
+   "options": "today"
+  },
+  {
+   "fieldname": "amount_paid",
+   "fieldtype": "Currency",
+   "label": "Amount Paid"
+  },
+  {
+   "fetch_from": "lease_contract.tenant",
+   "fieldname": "tenant",
+   "fieldtype": "Data",
+   "label": "Tenant",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "lease_contract.tenant_email",
+   "fieldname": "tenant_email",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Tenant Email",
+   "options": "Email",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "lease_contract.rent_amount",
+   "fieldname": "rent_amount",
+   "fieldtype": "Currency",
+   "label": "Rent Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payment_proof",
+   "fieldtype": "Attach Image",
+   "label": "Payment Proof"
+  },
+  {
+   "fieldname": "contract_information_section",
+   "fieldtype": "Section Break",
+   "label": "Contract Information"
+  },
+  {
+   "fetch_from": "lease_contract.expiry_date",
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "label": "Expiry Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_fqzo",
+   "fieldtype": "Section Break",
+   "label": "Payment Information"
+  },
+  {
+   "fieldname": "payment_mode",
+   "fieldtype": "Select",
+   "label": "Payment Mode ",
+   "options": "Cash\nCredit Card\nBank Transfer\nUPI"
+  },
+  {
+   "fieldname": "column_break_ncva",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_yltl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Rent Payment",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-03-03 15:28:46.128851",
+ "modified_by": "Administrator",
+ "module": "Airport Shop Management",
+ "name": "Rent Payment",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

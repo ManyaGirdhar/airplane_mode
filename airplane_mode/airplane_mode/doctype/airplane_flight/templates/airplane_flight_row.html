@@ -1,0 +1,22 @@
+<div class = flight-card>
+	{% set airline = frappe.db.get_value("Airplane", doc.airplane, "airline") %}
+	<h3>{{airline}}</h3>
+	<p>{{ doc.source_airport_code }} → {{ doc.destination_airport_code }}</p>
+    <p>{{ doc.date_of_departure }} | {{ doc.time_of_departure }} | {{ doc.duration }}</p>
+	<a href="{{ doc.route }}">View Flight</a>
+</div>
+<!-- this is a sample default list template -->
+<style>
+    .flight-card {
+        border: 1px solid #ddd;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        background: #fff;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    a {
+        color: blue;
+        text-decoration: none;
+    }
+</style>

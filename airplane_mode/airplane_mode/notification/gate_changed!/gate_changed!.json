@@ -1,0 +1,32 @@
+{
+ "attach_print": 0,
+ "channel": "Email",
+ "condition": "",
+ "creation": "2025-02-27 11:30:36.181272",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Airplane Ticket",
+ "enabled": 1,
+ "event": "Value Change",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "<p>Dear {{ doc.passenger_name }},</p>\n\n<p>We would like to inform you that the gate number for your upcoming flight <strong>{{ doc.flight }}</strong> has been updated to <strong>Gate {{ doc.gate_number }}</strong>.</p>\n\n<p>Please arrive at the gate in advance to ensure a smooth boarding process.</p>\n\n<h3>Flight Details:</h3>\n\n<ul>\n<li><strong>Departure Date:</strong> {{ doc.departure_date }}</li>\n<li><strong>Departure Time:</strong> {{ doc.departure_time }}</li>\n</ul>\n\n<p>For any assistance, feel free to reach out to our support team.</p>\n\n<hr>\n\n<p>Best Regards,</p>\n\n<p><strong>SkyTrack Airport Management System</strong></p>\n\n<p>Email: <a href=\"mailto:skytrack.management.system@gmail.com\">skytrack.management.system@gmail.com</a></p>\n",
+ "message_type": "Markdown",
+ "modified": "2025-03-02 01:55:57.283620",
+ "modified_by": "Administrator",
+ "module": "Airplane Mode",
+ "name": "gate changed!",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_document_field": "passenger_email"
+  }
+ ],
+ "send_system_notification": 1,
+ "send_to_all_assignees": 0,
+ "sender": "SkyTrack",
+ "sender_email": "skytrack.management.system@gmail.com",
+ "subject": "Gate Change Notification for Your {{doc.flight}}",
+ "value_changed": "gate_number"
+}

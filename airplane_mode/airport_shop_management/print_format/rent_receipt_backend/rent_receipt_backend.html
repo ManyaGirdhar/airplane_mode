@@ -1,0 +1,138 @@
+{% if letter_head and not no_letterhead -%} {% if print_settings.repeat_header_footer %} <br> <div class="letter-head">{{ letter_head }}</div> {%- endif %}{%- endif %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent Receipt</title>
+</head>
+<body>
+    <div class="brand-header">
+        <h1>SkyTrack Management System</h1>
+    </div>
+
+    <div class="receipt-container">
+        <h2 class="receipt-header">Rent Receipt</h2>
+        <div class="receipt-content">
+            <p><strong>Tenant Name:</strong> {{doc.tenant}}</p>
+            <p><strong>Lease Contract:</strong> {{doc.lease_contract}}</p>
+            <p><strong>Rent Amount:</strong> {{doc.rent_amount}}</p>
+            <p><strong>Payment Date:</strong> {{doc.payment_date}}</p>
+            <p><strong>Amount Paid:</strong> {{doc.amount_paid}}</p>
+            <p><strong>Payment Mode:</strong> {{doc.payment_mode}}</p>
+            <p><strong>Lease Expiry Date:</strong> {{doc.expiry_date}}</p>
+        </div>
+        <div class="signature">
+            <p>SkyTrack</p>
+            <div class="line"></div>
+        </div>
+        <div class="receipt-footer">
+            <p>SkyTrack Management System</p>
+            <p>Email: <a href="mailto:skytrack.management.system@gmail.com">skytrack.management.system@gmail.com</a></p>
+        </div>
+    </div>
+</body>
+
+
+
+
+<style>
+
+    /* Full-page layout */
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #f4f7fc;
+        font-family: Arial, sans-serif;
+    }
+    
+    /* Branding Header */
+    .brand-header {
+        text-align: center;
+        background-color: #007bff;
+        color: white;
+        width: 100%;
+        padding: 15px 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    
+    /* Receipt Box */
+    .receipt-container {
+        background: white;
+        padding: 25px;
+        width: 100%;
+        max-width: 1100px; /* Increased width */
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        text-align: left;
+        margin-top: 20px;
+    }
+    
+    /* Header */
+    .receipt-header {
+        text-align: center;
+        font-size: 22px;
+        font-weight: bold;
+        color: #007bff;
+        border-bottom: 2px solid #007bff;
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+    }
+    
+    /* Receipt Content */
+    .receipt-content p {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+    
+    .receipt-content strong {
+        font-weight: bold;
+    }
+    
+    /* Signature */
+    .signature {
+        text-align: right;
+        margin-top: 20px;
+        color:  #007bff;
+    }
+    
+    .signature .line {
+        width: 150px;
+        height: 2px;
+        background: black;
+        margin: 5px 0 10px auto;
+        color: ;
+    }
+    
+    /* Footer */
+    .receipt-footer {
+        text-align: center;
+        font-size: 14px;
+        color: #555;
+        margin-top: 15px;
+    }
+    
+    .receipt-footer a {
+        color: #007bff;
+        text-decoration: none;
+    }
+    
+    
+    
+    </style>
+    
+
+
+
+
+</html>
+

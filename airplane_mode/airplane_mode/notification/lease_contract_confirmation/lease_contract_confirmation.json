@@ -1,0 +1,30 @@
+{
+ "attach_print": 0,
+ "channel": "Email",
+ "creation": "2025-03-02 01:51:14.929779",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Lease Contract",
+ "enabled": 1,
+ "event": "Submit",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "<p>Dear {{ doc.tenant }},</p>\n\n<p>We are pleased to confirm the lease agreement for <strong>{{ doc.shop }}</strong> at <strong>{{ doc.airport }}</strong>. Below are the details of your lease contract:</p>\n\n<table border=\"1\" cellpadding=\"8\" cellspacing=\"0\" style=\"border-collapse: collapse; width: 100%; text-align: left;\">\n    <tr>\n        <td><strong>Shop Name:</strong></td>\n        <td>{{ doc.shop }}</td>\n    </tr>\n    <tr>\n        <td><strong>Airport:</strong></td>\n        <td>{{ doc.airport }}</td>\n    </tr>\n    <tr>\n        <td><strong>Tenant Name:</strong></td>\n        <td>{{ doc.tenant }}</td>\n    </tr>\n    <tr>\n        <td><strong>Lease Start Date:</strong></td>\n        <td>{{ doc.start_date }}</td>\n    </tr>\n    <tr>\n        <td><strong>Lease Expiry Date:</strong></td>\n        <td>{{ doc.expiry_date }}</td>\n    </tr>\n    <tr>\n        <td><strong>Rent Amount:</strong></td>\n        <td>\u20b9{{ doc.rent_amount }} per month</td>\n    </tr>\n</table>\n\n<p>This contract has been successfully registered, and you may now proceed with further setup and operations. If you have any questions, feel free to contact us.</p>\n\n<p>We look forward to a successful partnership.</p>\n\n<p><strong>Best Regards,</strong><br>\nSkyTrack Airport Management System<br>\nEmail: <a href=\"mailto:skytrack.management.system@gmail.com\">skytrack.management.system@gmail.com</a></p>\n",
+ "message_type": "Markdown",
+ "modified": "2025-03-02 01:59:17.816888",
+ "modified_by": "Administrator",
+ "module": "Airplane Mode",
+ "name": "Lease contract confirmation",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_document_field": "tenant_email"
+  }
+ ],
+ "send_system_notification": 1,
+ "send_to_all_assignees": 0,
+ "sender": "SkyTrack",
+ "sender_email": "skytrack.management.system@gmail.com",
+ "subject": "Lease Contract Confirmed!"
+}
